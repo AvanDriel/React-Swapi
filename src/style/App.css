@@ -1,0 +1,10 @@
+body, h1, h2, h3, h4, p {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none; /* no underline */
+}
+
+body	{ background:url('./images/stars.jpg') top right no-repeat; background-attachment:fixed; }
