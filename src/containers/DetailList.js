@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import '../style/App.css';
+import { List } from '../components/List'
+import { Card } from '../components/Card'
+import { ListItem } from '../components/ListItem'
+import ScrollingText from '../components/ScrollingText'
 
 class DetailList extends Component {
     constructor(props) {
@@ -36,16 +40,17 @@ class DetailList extends Component {
         if (error) {
             return <div> Error: { error.message }</div>
         } else if (!isLoaded) {
-            return(<div>Loading..</div>)
+            return(<ScrollingText toLoad={ this.props.match.params.name } />)
         } else {
             for (const [key, value] of Object.entries(items)) {
-                console.log(`${key}: ${value}`)
-                this.rows.push(<li>{`${key}: ${value}`}</li>)
+                this.rows.push(<ListItem>{`${ key }: ${ value }`}</ListItem>)
             }
-            return (
-                <ul>
-                    { this.rows }
-                </ul>
+            return ( 
+                <Card detailList >
+                    <List>
+                        { this.rows }
+                    </List>
+                </Card>    
             )
         }
     }

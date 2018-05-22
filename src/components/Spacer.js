@@ -1,7 +1,6 @@
-import React from 'react'
 import styled from 'styled-components'
 
-const SpacerDiv = styled.div`
+export const Spacer = styled.div`
     width: 100vw;
     height: 8rem;
 
@@ -13,9 +12,3 @@ const SpacerDiv = styled.div`
         height: 4rem;
     }
 `
-
-const Spacer = () => (
-    <SpacerDiv />    
-)
-
-export default Spacer

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import '../style/App.css';
 import DetailCard from '../components/DetailCard'
-import Header from '../components/Header'
-import Spacer from '../components/Spacer'
+import { CardWrapper } from '../components/CardWrapper'
+import ScrollingText from '../components/ScrollingText'
 
 class Detail extends Component {
     constructor(props) {
@@ -62,28 +62,23 @@ class Detail extends Component {
         if (error) {
             return <div> Error: { error.message }</div>
         } else if (!isLoaded) {
-            return(<div>Loading..</div>)
+            return(<ScrollingText toLoad={ this.props.match.params.category }/>)
         } else {
             if(this.props.match.params.category === "films") {
                 return(
-                    <div>
-                    <Header />
-                    <Spacer />
+                    <CardWrapper>
                         { items.map(item => (
-                            <DetailCard  key={item.title} title={item.title} category={this.props.match.params.category}/>
+                            <DetailCard  key={ item.title } title={ item.title } category={ this.props.match.params.category }/>
                         )) }
-                    </div>
+                    </CardWrapper>
                 )
             }else {
-                console.log(items)
                 return(
-                    <div>
-                    <Header />
-                    <Spacer />
+                    <CardWrapper>
                         { items.map(item => (
-                            <DetailCard key={item.title} title={item.name} category={this.props.match.params.category}/>
+                            <DetailCard key={ item.title } title={ item.name } category={ this.props.match.params.category }/>
                         )) }
-                    </div>
+                    </CardWrapper>
                 )
             }
         }

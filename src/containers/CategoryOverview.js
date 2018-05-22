@@ -1,19 +1,11 @@
 import React, { Component } from 'react';
 import CategoryCard from '../components/CategoryCard'
-import Header from '../components/Header'
-import styled from 'styled-components'
-import Spacer from '../components/Spacer'
-
-const CardWrapper = styled.div`
-    margin-left: 9.5vw;
-`
+import { CardWrapper } from '../components/CardWrapper'
 
 export default class CategoryOverview extends Component {
     render() {
         return(
             <div className="backgroundDiv">
-                <Header />
-                <Spacer />
                 <CardWrapper>
                     <CategoryCard title='People' category='people' />
                     <CategoryCard title='Starships' category='starships' />
