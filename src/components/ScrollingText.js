@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styled, { keyframes } from 'styled-components'
-
+//Loading Screen for when data is fetched
 const NoScroll = styled.div`
   /* Force the body to fill the entire screen */
   width: 100%;
@@ -70,6 +70,7 @@ class ScrollingText extends Component {
           <Crawl>
             <CrawlTitle>
               <p>Star Wars API</p>
+              {/* Take the toload prop and display what is being loaded */}
               <h1 style={{ lineHeight: '200px' }}>Loading { this.props.toLoad }</h1>
             </CrawlTitle>  
           </Crawl> 

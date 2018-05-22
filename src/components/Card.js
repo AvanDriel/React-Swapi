@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-
+//A Card: the grey boxes everywhere in the application
 export const Card = styled.div`
     width: 25vw;
     height: 30vh;
@@ -12,6 +12,7 @@ export const Card = styled.div`
     -moz-border-radius: 30px;
     border-radius: 30px;
 
+    //The resize on screen size css for the small cards
     ${props => props.small && css`
       :hover {
         background-color: 	#3E3D3D
@@ -26,6 +27,7 @@ export const Card = styled.div`
       }
   `}
     
+    //Css for the big card in DetailList
     ${props => props.detailList && css`
       width: 80vw;
       height: 75vh;

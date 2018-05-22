@@ -17,6 +17,7 @@ import { Spacer } from '../components/Spacer'
 class App extends Component {
   render() {
     return (
+      //Hashrouter, because Node isn't available on my hosting
       <HashRouter>
         <div className="App">
         <Header>

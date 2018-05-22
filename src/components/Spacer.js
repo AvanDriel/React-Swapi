@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-
+//Spacer for underneath the header
 export const Spacer = styled.div`
     width: 100vw;
     height: 8rem;

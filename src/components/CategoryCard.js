@@ -4,6 +4,7 @@ import { Card } from './Card'
 import { CardTitle } from './CardTitle'
 import { CategoryImage } from './CategoryImage'
 
+//Card with a image for the first screen
 export default class CategoryCard extends Component {
     render() {
         return(
